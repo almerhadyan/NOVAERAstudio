@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #111318;
+  --color-surface-dim: #111318;
+  --color-surface-bright: #37393e;
+  --color-surface-container-lowest: #0c0e13;
+  --color-surface-container-low: #191c20;
+  --color-surface-container: #1d2024;
+  --color-surface-container-high: #272a2f;
+  --color-surface-container-highest: #32353a;
+  --color-on-surface: #e1e2e9;
+  --color-on-surface-variant: #c0c7d3;
+  --color-outline: #8a919d;
+  --color-outline-variant: #404751;
+  --color-primary: #a1c9ff;
+  --color-primary-container: #5aa9ff;
+  --color-on-primary: #00325a;
+  --color-on-primary-container: #003d6c;
+  --color-secondary: #5fd8e0;
+  --color-secondary-container: #00a0a8;
+  --color-on-secondary: #00373a;
+  --color-tertiary: #a5d574;
+  --color-tertiary-container: #85b357;
+  --color-on-tertiary: #1c3700;
+  --color-background: #111318;
+  --color-on-background: #e1e2e9;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+
+  --font-display-xl: 'Space Grotesk', -apple-system, sans-serif;
+  --font-display-lg: 'Space Grotesk', -apple-system, sans-serif;
+  --font-headline-lg: 'Space Grotesk', -apple-system, sans-serif;
+  --font-headline-md: 'Space Grotesk', -apple-system, sans-serif;
+  --font-headline-sm: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body-editorial: 'Inter', -apple-system, sans-serif;
+  --font-body-lg: 'Inter', -apple-system, sans-serif;
+  --font-body-md: 'Inter', -apple-system, sans-serif;
+  --font-body-sm: 'Inter', -apple-system, sans-serif;
+  --font-label-technical: 'JetBrains Mono', monospace;
+  --font-label-code: 'JetBrains Mono', monospace;
+  --font-label-stamp: 'JetBrains Mono', monospace;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 2rem;
+  --spacing-space-xl: 4rem;
+  --spacing-margin: 4rem;
+  --spacing-margin-tablet: 2rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-tablet: 1rem;
+  --spacing-gutter-mobile: 0.75rem;
+}
+
+/* Custom font styles matching design system */
+.font-display-xl {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.text-display-xl {
+  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.font-display-lg {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.text-display-lg {
+  font-size: clamp(2rem, 3.5vw + 0.5rem, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.font-headline-lg {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.text-headline-lg {
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.font-headline-md {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.text-headline-md {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.font-headline-sm {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.text-headline-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 0em;
+}
+
+.font-body-editorial {
+  font-family: 'Inter', sans-serif;
+}
+.text-body-editorial {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  letter-spacing: -0.005em;
+  font-weight: 300;
+}
+
+.font-body-lg {
+  font-family: 'Inter', sans-serif;
+}
+.text-body-lg {
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.font-body-md {
+  font-family: 'Inter', sans-serif;
+}
+.text-body-md {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.font-body-sm {
+  font-family: 'Inter', sans-serif;
+}
+.text-body-sm {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.font-label-technical {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+}
+.text-label-technical {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+}
+
+.font-label-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+}
+.text-label-code {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+}
+
+.font-label-stamp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.12em;
+}
+.text-label-stamp {
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.12em;
+}
+
+/* Custom Spacing Helpers */
+.px-margin {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.px-margin-tablet {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.px-margin-mobile {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.py-space-xl {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.py-space-lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.py-space-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-space-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.p-space-lg {
+  padding: 2rem;
+}
+.p-space-md {
+  padding: 1rem;
+}
+.p-space-xs {
+  padding: 0.25rem;
+}
+.p-space-xl {
+  padding: 4rem;
+}
+.gap-gutter {
+  gap: 1.5rem;
+}
+.gap-space-xs {
+  gap: 0.25rem;
+}
+.gap-space-sm {
+  gap: 0.5rem;
+}
+.gap-space-md {
+  gap: 1rem;
+}
+.gap-space-lg {
+  gap: 2rem;
+}
+.gap-space-xl {
+  gap: 4rem;
+}
+
+/* Material Symbols sizing helper */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  display: inline-block;
+  user-select: none;
+}
+
+/* Hide scrollbars cleanly */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0e13;
+}
+::-webkit-scrollbar-thumb {
+  background: #272a2f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404751;
+}
+
+/* Keyframes for subtle atmospheric animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 8s ease-in-out infinite;
+}

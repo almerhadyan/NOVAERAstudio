@@ -1,0 +1,6 @@
+{
+  "name": "NOVAERA Studio",
+  "description": "Independent creative technology studio designing and engineering digital experiences, spatial interfaces, and computational systems for ambitious brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
